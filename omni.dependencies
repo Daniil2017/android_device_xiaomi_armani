@@ -38,5 +38,10 @@
     "repository": "android_device_qcom_caf-sepolicy",
     "target_path": "device/qcom/caf-sepolicy",
     "revision": "android-6.0"
+  },
+  {
+    "repository": "android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.7",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.7",
+    "revision": "android-6.0"
   }
 ]
