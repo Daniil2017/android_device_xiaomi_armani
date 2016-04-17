@@ -163,6 +163,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
+ROM_BUILDTYPE := TEST
+TARGET_BOOTANIMATION_SIZE := 1080x720
+
 $(call inherit-product, frameworks/native-caf/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
