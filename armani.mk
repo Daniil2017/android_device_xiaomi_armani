@@ -157,14 +157,29 @@ PRODUCT_COPY_FILES += \
     frameworks/native-caf/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native-caf/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+#	WIFI
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    ro.disableWifiApFirmwareReload=true
+
+PRODUCT_PACKAGES += \
+    libcurl \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
+    libwcnss_qmi \
+    wcnss_service
+
+#	ANT+
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+
 #	OTHER
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
-
-ROM_BUILDTYPE := TEST
-TARGET_BOOTANIMATION_SIZE := 1080x720
 
 $(call inherit-product, frameworks/native-caf/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
