@@ -110,6 +110,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.ril.config=simactivation
 
+PRODUCT_PACKAGES += \
+    libxml2
+
 #	TIME SERVICES
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
