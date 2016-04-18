@@ -95,7 +95,7 @@ TARGET_RECOVERY_FSTAB := vendor/xiaomi/armani/boot/recovery_ramdisk/recovery.fst
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 #	SELINUX
-include device/qcom/caf-sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/xiaomi/armani/sepolicy
 
 #	TIME SERVICES
