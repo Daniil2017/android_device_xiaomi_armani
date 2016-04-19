@@ -178,6 +178,11 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+#	CHARGER
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    libhealthd.armani
+
 #	OTHER
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
