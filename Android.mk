@@ -45,4 +45,11 @@ LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := healthd/healthd_board_armani.cpp
+LOCAL_MODULE := libhealthd.armani
+LOCAL_CFLAGS := -Werror
+LOCAL_C_INCLUDES := system/core/healthd bootable/recovery
+include $(BUILD_STATIC_LIBRARY)
+
 endif

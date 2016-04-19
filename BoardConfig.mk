@@ -93,6 +93,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_RECOVERY_FSTAB := vendor/xiaomi/armani/boot/recovery_ramdisk/recovery.fstab
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+HAVE_SELINUX := true
 
 #	SELINUX
 include device/qcom/sepolicy/sepolicy.mk
@@ -125,3 +126,8 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 #	LIGHTS
 TARGET_PROVIDES_LIBLIGHT := true
+
+#	CHARGER
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.armani
