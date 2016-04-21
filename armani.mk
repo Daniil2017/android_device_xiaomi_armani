@@ -127,11 +127,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bt.dev_power_class=1
 
 #	MEDIA
-#PRODUCT_PACKAGES += \
-#    libOmxCore \
-#    libOmxVdec \
-#    libOmxVenc \
-#    libstagefrighthw
+PRODUCT_PACKAGES += \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
 
 PRODUCT_COPY_FILES += \
     frameworks/av-caf/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
