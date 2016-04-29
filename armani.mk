@@ -11,8 +11,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/armani/overlay
 
 #	ART
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags=--no-watch-dog
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dex2oat-flags=--no-watch-dog
 
 #	GRAPHICS
 PRODUCT_PACKAGES += \
@@ -22,16 +21,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8226
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196608 \
-    ro.sf.lcd_density=320 \
-    debug.sf.fb_always_on=1 \
-    debug.sf.hw=1 \
-    debug.egl.hw=1 \
-    debug.composition.type=c2d \
-    persist.hwc.mdpcomp.enable=true \
-    debug.mdpcomp.logs=0 \
-    drm.service.enabled=true \
-    ro.qualcomm.cabl=0
+    ro.qualcomm.cabl=0 \
+    drm.service.enabled=true
 
 #	AUDIO
 PRODUCT_PACKAGES += \
@@ -44,23 +35,11 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    tinymix
+    tinymix \
+    qcmediaplayer \
+    libdashplayer
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.ssr=false \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=true \
-    persist.audio.fluence.speaker=false \
-    audio.offload.pcm.16bit.enable=false \
-    audio.offload.pcm.24bit.enable=false \
-    audio.offload.buffer.size.kb=32 \
-    audio.offload.gapless.enabled=true \
-    audio.offload.multiple.enabled=false \
-    audio.offload.video=false \
-    audio.offload.disable=true \
-    av.streaming.offload.enable=false \
-    use.voice.path.for.pcm.voip=true
+PRODUCT_BOOT_JARS += qcmediaplayer
 
 #	EBTABLES
 PRODUCT_PACKAGES += \
@@ -87,35 +66,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8226
 
-#	GPS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gps.agps_provider=1 \
-    ro.qc.sdk.izat.premium_enabled=1 \
-    ro.qc.sdk.izat.service_mask=0x5 \
-    persist.gps.qc_nlp_in_use=1 \
-    persist.loc.nlp_name=com.qualcomm.services.location
-
-#	RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    rild.libargs=-d /dev/smd0 \
-    ril.subscription.types=RUIM \
-    persist.data.netmgrd.qos.enable=true \
-    persist.data.qmi.adb_logmask=0 \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.dont_use_dsd=true \
-    persist.radio.msgtunnel.start=false \
-    persist.radio.multisim.config=dsds \
-    persist.radio.rat_on=combine \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.ril.config=simactivation
-
 PRODUCT_PACKAGES += \
     libxml2
 
 #	TIME SERVICES
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
+PRODUCT_PROPERTY_OVERRIDES += persist.timed.enable=true
 
 #	CAMERA
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -183,6 +138,10 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     libhealthd.armani
 
+#	RIL
+PRODUCT_PACKAGES += \
+    BasicSmsReceiver
+
 #	OTHER
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
@@ -191,6 +150,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     sys.usb.config=mtp,adb
+
 $(call inherit-product, frameworks/native-caf/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -201,5 +161,5 @@ $(call inherit-product, vendor/xiaomi/armani/armani.mk)
 PRODUCT_DEVICE := armani
 PRODUCT_NAME := armani
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Red Rice 1S
+PRODUCT_MODEL := armani
 PRODUCT_MANUFACTURER := Xiaomi
