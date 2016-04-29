@@ -138,9 +138,9 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     libhealthd.armani
 
-#	RIL
+#	GPS
 PRODUCT_PACKAGES += \
-    BasicSmsReceiver
+    gps.msm8226
 
 #	OTHER
 PRODUCT_PROPERTY_OVERRIDES += \
