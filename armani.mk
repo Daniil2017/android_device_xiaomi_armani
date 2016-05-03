@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix \
     qcmediaplayer \
-    libdashplayer
+    libdashplayer \
+    libmm-omxcore
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
@@ -125,7 +126,12 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwcnss_qmi \
-    wcnss_service
+    wcnss_service \
+    libwifi-hal-qcom \
+    dhcpcd.conf \
+    hostapd \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 #	ANT+
 PRODUCT_PACKAGES += \
@@ -150,6 +156,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     sys.usb.config=mtp,adb
+
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
 
 $(call inherit-product, frameworks/native-caf/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
