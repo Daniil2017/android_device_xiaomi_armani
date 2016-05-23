@@ -262,7 +262,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-    camera/CameraWrapper.cpp camera/QCameraParameters.cpp
+    camera/CameraWrapper.cpp
 LOCAL_SHARED_LIBRARIES := \
     libhardware liblog libcamera_client libutils
 LOCAL_C_INCLUDES += \
