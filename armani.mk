@@ -36,9 +36,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix \
-    qcmediaplayer \
-    libdashplayer \
-    libmm-omxcore
+    libaudiopolicymanager
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
@@ -59,6 +57,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8226
 
+#	FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
 #	LIGHTS
 PRODUCT_PACKAGES += \
     lights.msm8226
@@ -67,15 +70,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8226
 
-PRODUCT_PACKAGES += \
-    libxml2
-
 #	TIME SERVICES
 PRODUCT_PROPERTY_OVERRIDES += persist.timed.enable=true
+
+PRODUCT_PACKAGES += \
+    TimeService
 
 #	CAMERA
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
+
+PRODUCT_PACKAGES += \
+    libxml2 \
+#    camera.msm8226
+
+#	SMS
+PRODUCT_PACKAGES += \
+    messaging
 
 #	BLUETOOTH
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -131,7 +142,8 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    libwpa_client
 
 #	ANT+
 PRODUCT_PACKAGES += \
@@ -146,7 +158,9 @@ PRODUCT_PACKAGES += \
 
 #	GPS
 PRODUCT_PACKAGES += \
-    gps.msm8226
+    gps.msm8226 \
+    com.qualcomm.location \
+    com.qualcomm.services.location
 
 #	OTHER
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,7 +172,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     sys.usb.config=mtp,adb
 
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig
+    libcnefeatureconfig 
 
 $(call inherit-product, frameworks/native-caf/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
