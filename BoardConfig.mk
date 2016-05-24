@@ -147,7 +147,7 @@ BLUETOOTH_HCI_USE_MCT := true
 
 #	OTHER
 #USE_CLANG_PLATFORM_BUILD := true
-TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/armani/include
+#TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/armani/include
 
 #	FM
 TARGET_QCOM_NO_FM_FIRMWARE := true

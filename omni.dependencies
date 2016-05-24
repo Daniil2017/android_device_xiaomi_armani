@@ -1,6 +1,6 @@
 [
   {
-    "remote": "omnirom",
+    "remote": "omnirom-fixes",
     "repository": "android_frameworks_av",
     "target_path": "frameworks/av-caf",
     "revision": "android-6.0-caf"

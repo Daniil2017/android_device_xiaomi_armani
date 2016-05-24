@@ -36,7 +36,11 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix \
-    libaudiopolicymanager
+    libaudiopolicymanager \
+    libstagefright_soft_vorbisdec \
+    libstagefright_soft_mp3dec \
+    libstagefright_soft_mpeg2dec \
+    libstagefright_omx
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
@@ -82,7 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     libxml2 \
-#    camera.msm8226
+    camera.msm8226
 
 #	SMS
 PRODUCT_PACKAGES += \
