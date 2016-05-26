@@ -36,13 +36,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix \
-    libaudiopolicymanager \
-    libstagefright_soft_vorbisdec \
-    libstagefright_soft_mp3dec \
-    libstagefright_soft_mpeg2dec \
-    libstagefright_omx
-
-PRODUCT_BOOT_JARS += qcmediaplayer
+    libaudiopolicymanager
 
 #	EBTABLES
 PRODUCT_PACKAGES += \
@@ -102,7 +96,13 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libdashplayer \
+    qcmediaplayer \
+    libOmxVdecHevc \
+    libmm-omxcore
+
+PRODUCT_BOOT_JARS += qcmediaplayer
 
 PRODUCT_COPY_FILES += \
     frameworks/av-caf/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \

@@ -2,3 +2,19 @@
 	 OmniRom
 	Daniil2017
 Configuration for Xiaomi Red Rice 1S (Redmi 1S, armani)
+
+Uses "omnirom-fixes" repository: repo init -u git://github.com/omnirom-fixes/android.git -b android-6.0
+
+Working:
+  Dual sim
+  3G
+  Camera
+  GPS
+  External sdcard
+  OTG
+
+Not working:
+  Sound
+  Sensors
+  Record video(Hardware codecs)
+  Play video(Hardware codecs)
