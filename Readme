@@ -12,9 +12,11 @@ Working:
   GPS
   External sdcard
   OTG
+  Sound
+  Wifi
+  Bluetooth
 
 Not working:
-  Sound
   Sensors
-  Record video(Hardware codecs)
-  Play video(Hardware codecs)
+  Play and record video(Hardware codecs)
+  Play and record sound(Hardware codecs)

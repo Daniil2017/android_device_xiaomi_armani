@@ -36,12 +36,6 @@
     "revision": "android-6.0-caf"
   },
   {
-    "remote": "omnirom",
-    "repository": "vendor_qcom_opensource_display-frameworks",
-    "target_path": "vendor/qcom/opensource/display-frameworks",
-    "revision": "android-6.0"
-  },
-  {
     "remote": "omnirom-fixes",
     "repository": "arm-cortex_a7-linux-gnueabihf-linaro_4.9",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-cortex_a7-linux-gnueabihf-linaro_4.9",
