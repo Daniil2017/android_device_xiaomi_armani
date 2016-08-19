@@ -24,7 +24,7 @@
     "revision": "android-6.0"
   },
   {
-    "remote": "omnirom",
+    "remote": "omnirom-fixes",
     "repository": "android_hardware_qcom_media-caf-msm8974",
     "target_path": "hardware/qcom/media-caf-msm8974",
     "revision": "android-6.0"
