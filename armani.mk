@@ -75,8 +75,8 @@ PRODUCT_PACKAGES += \
     TimeService
 
 #	CAMERA
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    camera2.portability.force_api=1
 
 PRODUCT_PACKAGES += \
     libxml2 \
