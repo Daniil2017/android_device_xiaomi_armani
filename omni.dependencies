@@ -1,74 +1,56 @@
 [
   {
-    "remote": "omnirom-fixes",
-    "repository": "android_frameworks_av",
-    "target_path": "frameworks/av-caf",
-    "revision": "android-6.0-caf"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_frameworks_native",
-    "target_path": "frameworks/native-caf",
-    "revision": "android-6.0-caf"
-  },
-  {
     "remote": "omnirom",
     "repository": "android_hardware_qcom_display-caf-msm8974",
     "target_path": "hardware/qcom/display-caf-msm8974",
-    "revision": "android-6.0"
+    "revision": "android-7.0"
   },
   {
     "remote": "omnirom",
     "repository": "android_hardware_qcom_audio-caf-msm8974",
     "target_path": "hardware/qcom/audio-caf-msm8974",
-    "revision": "android-6.0"
-  },
-  {
-    "remote": "omnirom-fixes",
-    "repository": "android_hardware_qcom_media-caf-msm8974",
-    "target_path": "hardware/qcom/media-caf-msm8974",
-    "revision": "android-6.0"
+    "revision": "android-7.0"
   },
   {
     "remote": "omnirom",
-    "repository": "android_hardware_ril",
-    "target_path": "hardware/ril-caf",
-    "revision": "android-6.0-caf"
+    "repository": "android_hardware_qcom_media-caf-msm8974",
+    "target_path": "hardware/qcom/media-caf-msm8974",
+    "revision": "android-7.0"
   },
   {
-    "remote": "omnirom-fixes",
-    "repository": "arm-cortex_a7-linux-gnueabihf-linaro_4.9",
+    "remote": "github",
+    "repository": "Daniil2017/arm-cortex_a7-linux-gnueabihf-linaro_4.9",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-cortex_a7-linux-gnueabihf-linaro_4.9",
     "revision": "master"
   },
   {
-    "remote": "omnirom-fixes",
+    "remote": "omnirom",
     "repository": "android_external_ant-wireless_ant_service",
     "target_path": "external/ant-wireless/ant_service",
-    "revision": "android-6.0"
+    "revision": "android-7.0"
   },
   {
-    "remote": "omnirom-fixes",
+    "remote": "omnirom",
     "repository": "android_external_ant-wireless_ant_native",
     "target_path": "external/ant-wireless/ant_native",
-    "revision": "android-6.0"
+    "revision": "android-7.0"
   },
   {
-    "remote": "omnirom-fixes",
+    "remote": "omnirom",
     "repository": "android_external_ant-wireless_antradio-library",
     "target_path": "external/ant-wireless/antradio-library",
-    "revision": "android-6.0"
+    "revision": "android-7.0"
   },
   {
-    "remote": "omnirom-fixes",
-    "repository": "android_device_qcom_common",
+    "remote": "github",
+    "repository": "Daniil2017/android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "revision": "android-6.0"
+    "revision": "omnirom_7.1"
   },
   {
-    "remote": "omnirom-fixes",
-    "repository": "android_device_qcom_sepolicy",
-    "target_path": "device/qcom/sepolicy",
-    "revision": "android-6.0"
+    "remote": "omnirom",
+    "repository": "android_device_qcom_caf-sepolicy",
+    "target_path": "device/qcom/sepolicy-caf",
+    "revision": "android-7.1"
   }
 ]
