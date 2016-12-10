@@ -57,7 +57,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/armani/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/xiaomi/armani
 TARGET_KERNEL_CONFIG := armani_omni_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=armani user_debug=31 msm_rtb.filter=0x37
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=armani user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
@@ -101,7 +101,7 @@ TW_NO_USB_STORAGE := true
 
 #	SELINUX
 include device/qcom/sepolicy-caf/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/xiaomi/armani/sepolicy
+#BOARD_SEPOLICY_DIRS += device/xiaomi/armani/sepolicy
 
 #	TIME SERVICES
 BOARD_USES_QC_TIME_SERVICES := true
@@ -133,13 +133,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 #	CHARGER
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.armani
 HEALTHD_ENABLE_TRICOLOR_LED := true
 
 #	INIT
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/xiaomi/armani/init/init_armani.cpp
 
 #	BLUETOOTH
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/armani/bluetooth
@@ -150,6 +147,7 @@ BLUETOOTH_HCI_USE_MCT := true
 #	OTHER
 #USE_CLANG_PLATFORM_BUILD := true
 #TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/armani/include
+USE_NINJA := false
 
 #	FM
 TARGET_QCOM_NO_FM_FIRMWARE := true

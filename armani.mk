@@ -167,8 +167,7 @@ PRODUCT_PACKAGES += \
 
 #	CHARGER
 PRODUCT_PACKAGES += \
-    charger_res_images \
-    libhealthd.armani
+    charger_res_images
 
 #	GPS
 PRODUCT_PACKAGES += \
