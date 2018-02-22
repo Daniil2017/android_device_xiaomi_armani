@@ -79,7 +79,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH := device/xiaomi-qcom/common/cryptfs_hw
 
 #	RECOVERY
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
@@ -100,7 +100,7 @@ TWHAVE_SELINUX := true
 TW_NO_USB_STORAGE := true
 
 #	SELINUX
-include device/qcom/sepolicy-caf/sepolicy.mk
+include device/qcom/caf-sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += device/xiaomi/armani/sepolicy
 
 #	TIME SERVICES
